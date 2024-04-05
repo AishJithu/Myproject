@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    {% extends 'blank_layout.html' %} {%block 'content'%}
+    <h1>List</h1>
+
+    {% for movie_obj in movies %}
+    <h2>Title: {{movie_obj.title}}</h2>
+    <h4>Year: {{movie_obj.year}}</h4>
+    <h4>Summary: {{movie_obj.description}}</h4>
+    <hr />
+    {% endfor %} {%endblock 'content'%}
+  </body>
+</html>

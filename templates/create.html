@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    {% extends 'blank_layout.html' %} {%block 'content'%}
+    <h1>Create</h1>
+
+    <form method="POST" enctype="multypart/form-data">
+      {% csrf_token %}
+      <input typr="text" required name="title" placeholder="Title" />
+      <br />
+      <br />
+      <input typr="text" required name="year" placeholder="Year" />
+      <br />
+      <br />
+      <input typr="text" required name="summary" placeholder="Summary" />
+      <br />
+      <br />
+      <button type="submit">Submit</button>
+      {% comment %} <input typr="text" placeholder="title" /> {% endcomment %}
+    </form>
+    {%endblock 'content'%}
+  </body>
+</html>
